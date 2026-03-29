@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Apex Ledger | Master Forex Trading</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#ccc3d8",
+                        "primary-container": "#7c3aed",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "tertiary": "#005766",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-secondary-fixed-variant": "#572ba0",
+                        "surface-dim": "#d3daef",
+                        "primary-fixed": "#eaddff",
+                        "surface-container-highest": "#dce2f7",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#25005a",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-container": "#b188ff",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container": "#e9edff",
+                        "surface-container-low": "#f1f3ff",
+                        "surface-tint": "#732ee4",
+                        "on-error": "#ffffff",
+                        "outline": "#7b7487",
+                        "secondary-fixed": "#ebdcff",
+                        "on-secondary-fixed": "#260059",
+                        "on-surface": "#141b2b",
+                        "background": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#141b2b",
+                        "primary-fixed-dim": "#d2bbff",
+                        "inverse-surface": "#293040",
+                        "inverse-on-surface": "#edf0ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001f26",
+                        "primary": "#630ed4",
+                        "tertiary-container": "#007184",
+                        "tertiary-fixed": "#acedff",
+                        "surface-variant": "#dce2f7",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#ede0ff",
+                        "on-tertiary-container": "#b7efff",
+                        "secondary": "#6f46b9",
+                        "on-secondary-container": "#44118d",
+                        "surface-container-high": "#e1e8fd",
+                        "inverse-primary": "#d2bbff",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#4a4455"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Smooth Scroll Helper */
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        /* Reveal Animation Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed">
+    <!-- TopNavBar -->
+    <header
+        class="bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 transition-all">
+        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-tighter text-violet-700 dark:text-violet-400 hover:opacity-90 transition-opacity">Apex
+                Ledger</a>
+            <div class="hidden md:flex gap-8 font-manrope text-sm font-semibold tracking-tight">
+                <a class="text-violet-600 dark:text-violet-400 border-b-2 border-violet-500 pb-1 hover:text-violet-500 transition-colors duration-200"
+                    href="index.html">Home</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="about.html">About</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="trading.html">Academy</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="blog.html">Blog</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="account.html"
+                    class="text-slate-600 dark:text-slate-400 font-manrope text-sm font-semibold hover:text-violet-600 transition-colors">Login</a>
+                <a href="account.html"
+                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold active:scale-95 transition-all shadow-md shadow-primary/20">Register</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-44 overflow-hidden min-h-[90vh] flex items-center bg-slate-950">
+            <!-- Hero Background Video -->
+            <div class="absolute inset-0 z-0 hero-parallax">
+                <div
+                    class="absolute inset-0 bg-slate-950/40 z-10 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent">
+                </div>
+                <video autoplay loop muted playsinline class="w-full h-full object-cover object-right opacity-80 hero-video">
+                    <source src="video/bg.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="max-w-7xl mx-auto px-8 -mt-24 relative z-20 reveal">
+                <div class="max-w-2xl">
+                    <span
+                        class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-white/10 backdrop-blur-md text-primary-fixed rounded-full border border-white/10">Precision
+                        Trading Academy</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-8 text-white">
+                        Master Forex <br />Trading with <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary-fixed to-tertiary-fixed-dim">Experts</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 mb-10 max-w-lg leading-relaxed">
+                        Navigate the world's largest financial market with institutional-grade strategies, live
+                        mentorship, and a community of high-performance traders.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="window.location.href='trading.html'"
+                            class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-4 rounded-lg font-bold tracking-tight shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-95">Start
+                            Your Journey</button>
+                        <button onclick="window.location.href='package.html'"
+                            class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-4 rounded-lg font-bold tracking-tight hover:bg-white/20 transition-all active:scale-95">Explore
+                            Academy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Preview / Statistics -->
+        <section class="py-12 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-black text-primary mb-1">$500M+</div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Volume Traded</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black text-primary mb-1">15K+</div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Active Students
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black text-primary mb-1">94%</div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Success Rate</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black text-primary mb-1">24/7</div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Expert Support
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Intro to Forex -->
+        <section class="py-32">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl md:text-5xl font-bold tracking-tighter mb-4">New to the Markets?</h2>
+                        <p class="text-on-surface-variant">Forex is the backbone of global commerce. We make the complex
+                            simple, turning volatility into opportunity for beginners.</p>
+                    </div>
+                    <a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                        Learn more about Forex <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 bg-surface-container-low p-10 rounded-xl relative overflow-hidden group">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-4">What is Forex?</h3>
+                            <p class="text-on-surface-variant max-w-md mb-8">Understand how currency pairs move, the
+                                role of central banks, and why the $6.6 trillion daily market is the ultimate arena for
+                                traders.</p>
+                            <button class="bg-primary text-on-primary px-6 py-2 rounded-lg text-sm font-bold">Watch
+                                Video</button>
+                        </div>
+                        <div
+                            class="absolute right-0 bottom-0 w-1/2 opacity-20 group-hover:scale-110 transition-transform duration-700">
+                            <img alt="Currency" class="w-full h-full object-cover"
+                                data-alt="Close-up of diverse world currencies scattered on a glass surface with soft professional lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLZPMe98jLK4_UGHV9986aglT1aPP8MJl7pzYu9kWvCPp7Md7P-Dia9HY3DL0C0c9beSosiFemr-C9F71EUg4IFng0ID0kCdVTeSsPua3_obxDAJwKQaNi6ndZ4yTfjGIFGh75NLO-Qy-ZJtpdr6dDHeFgkvTOPKPtSb7njXmKSB6GbJmKrkpKQrLv6-PWQNv6XA-IwrCRYSsNoZo3cZoXvG3f9UPvxf3MZcvO_gTb3ZvqpEpCjx65f8XXdRm5zK51cUAFvUC_QX8" />
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-tertiary-container to-tertiary p-10 rounded-xl text-on-tertiary flex flex-col justify-between">
+                        <span class="material-symbols-outlined text-4xl" data-icon="insights">insights</span>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Market Dynamics</h3>
+                            <p class="text-on-tertiary/80 text-sm">Grasp the fundamental drivers behind price action.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Learning Process -->
+        <section class="py-32 bg-surface-container-highest/30">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tighter mb-20 text-center">The Path to Mastery</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center mb-6 font-black text-xl shadow-lg shadow-primary/20">
+                            1</div>
+                        <h4 class="text-xl font-bold mb-3">Basics</h4>
+                        <p class="text-sm text-on-surface-variant">Master pips, lots, leverage, and the core mechanics
+                            of trading.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center mb-6 font-black text-xl shadow-lg shadow-primary/20">
+                            2</div>
+                        <h4 class="text-xl font-bold mb-3">Market Analysis</h4>
+                        <p class="text-sm text-on-surface-variant">Combine technical patterns with fundamental economic
+                            data.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center mb-6 font-black text-xl shadow-lg shadow-primary/20">
+                            3</div>
+                        <h4 class="text-xl font-bold mb-3">Strategy</h4>
+                        <p class="text-sm text-on-surface-variant">Build a repeatable, rule-based system that fits your
+                            lifestyle.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center mb-6 font-black text-xl shadow-lg shadow-primary/20">
+                            4</div>
+                        <h4 class="text-xl font-bold mb-3">Live Trading</h4>
+                        <p class="text-sm text-on-surface-variant">Execute trades in real-time under the guidance of our
+                            pros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mentorship Section -->
+        <section class="py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img alt="Community" class="rounded-lg shadow-xl"
+                            data-alt="A diverse group of professional traders collaborating in a modern brightly lit office with multiple monitor setups"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuChJOc55ekEitEaO-S6JFt94QVvGFRhdWU9b1FGI06cb2hizAMbwzuWVq7-vaIeyRawzCWD7ljpWcBokVvM1i2yyqHUUchOWsy5H0MpSw8h7JruaW1rOMIRrtHm2UQnRJB6VzJJ9HOezsVYmKuczNJPV2GoDM3MM4UrbEWxhiZTLxdTRVTlvuxoCdK9fYiUCl1U8gY98WyuQhsxyLcOaiHzpDIyVGToP3DJsaw62hVAvCYt5aQEJ4tdho4ha0v8b6nSdFVIcuvapHk" />
+                        <div class="space-y-4 pt-8">
+                            <div class="bg-surface-container-high p-6 rounded-lg">
+                                <span class="material-symbols-outlined text-primary mb-4"
+                                    data-icon="groups">groups</span>
+                                <div class="font-bold">Live Sessions</div>
+                                <div class="text-xs text-on-surface-variant">Daily market breakdown</div>
+                            </div>
+                            <div class="bg-tertiary-container text-on-tertiary p-6 rounded-lg">
+                                <span class="material-symbols-outlined mb-4" data-icon="chat">chat</span>
+                                <div class="font-bold">Expert Chat</div>
+                                <div class="text-xs opacity-80">Direct mentor access</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-5xl font-bold tracking-tighter mb-8 leading-tight">Beyond Courses:
+                        <br />Elite Mentorship
+                    </h2>
+                    <p class="text-on-surface-variant mb-8 text-lg">
+                        Trading is lonely; it shouldn't be. Join a high-caliber community where insights are shared, and
+                        every trade is a lesson. Our mentors don't just teach; they trade alongside you.
+                    </p>
+                    <ul class="space-y-6 mb-10">
+                        <li class="flex gap-4 items-start">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary text-sm"
+                                    data-icon="check">check</span>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-sm uppercase tracking-wider text-primary">Direct Access</h5>
+                                <p class="text-on-surface-variant">Daily Q&amp;A sessions with seasoned floor traders.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary text-sm"
+                                    data-icon="check">check</span>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-sm uppercase tracking-wider text-primary">Global Community
+                                </h5>
+                                <p class="text-on-surface-variant">Connect with 5,000+ traders across 6 continents.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button
+                        class="text-primary font-bold border-b-2 border-primary/20 pb-1 hover:border-primary transition-all">Join
+                        the Inner Circle</button>
+                </div>
+            </div>
+        </section>
+        <!-- Learning Levels (Updated to Roadmap) -->
+        <section class="py-32 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl md:text-5xl font-bold tracking-tighter mb-4">Your Trading Career Roadmap</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">From foundational basics to
+                        institutional mastery. Choose the path that matches your current expertise.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Explorer Card -->
+                    <div
+                        class="bg-surface-container-lowest p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/5 flex flex-col group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-violet-100 text-violet-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-2xl">rocket_launch</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Explorer</h3>
+                        <p class="text-sm text-on-surface-variant mb-8 leading-relaxed">Perfect for absolute beginners.
+                            We'll guide you through the first steps of your financial journey with zero jargon.</p>
+
+                        <ul class="space-y-4 mb-10 text-on-surface-variant text-sm flex-grow">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg"
+                                    data-icon="school">school</span> Intro to Forex Fundamentals</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg"
+                                    data-icon="terminal">terminal</span>
+                                Terminal & Tool Setup</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg"
+                                    data-icon="psychology">psychology</span> Risk Management Basics</li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-xl bg-surface-container-high text-on-surface font-bold hover:bg-primary hover:text-white transition-all mt-auto group-hover:shadow-lg">Start
+                            Explorer Path</button>
+                    </div>
+                    <!-- Professional Card (Most Popular) -->
+                    <div
+                        class="bg-surface-container-lowest p-10 rounded-2xl shadow-2xl scale-105 border-2 border-primary relative z-10 flex flex-col group">
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-on-primary px-6 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                            Most Selected</div>
+                        <div
+                            class="w-12 h-12 rounded-xl bg-violet-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-violet-200">
+                            <span class="material-symbols-outlined text-2xl">trending_up</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <p class="text-sm text-on-surface-variant mb-8 leading-relaxed">For traders with existing
+                            knowledge looking to build a consistent, rule-based edge in the live markets.</p>
+
+                        <ul class="space-y-4 mb-10 text-on-surface-variant text-sm flex-grow">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg"
+                                    data-icon="analytics">analytics</span> Advanced Price Action</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg"
+                                    data-icon="groups">groups</span> Weekly Live Mentorship</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg"
+                                    data-icon="forum">forum</span> Private Trading Floor Access</li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-all mt-auto">Enter
+                            Pro Curriculum</button>
+                    </div>
+                    <!-- Institutional Card -->
+                    <div
+                        class="bg-surface-container-lowest p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/5 flex flex-col group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-2xl">account_balance</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Institutional</h3>
+                        <p class="text-sm text-on-surface-variant mb-8 leading-relaxed">Advanced strategies for
+                            high-capital traders. Master the techniques used by bank and hedge fund professionals.</p>
+
+                        <ul class="space-y-4 mb-10 text-on-surface-variant text-sm flex-grow">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg"
+                                    data-icon="person_search">person_search</span> 1-on-1 Portfolio Reviews</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg"
+                                    data-icon="architecture">architecture</span> Custom Strategy Engine</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-lg"
+                                    data-icon="workspace_premium">workspace_premium</span> Prop-Firm Prep Course</li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-xl bg-surface-container-high text-on-surface font-bold hover:bg-slate-900 hover:text-white transition-all mt-auto group-hover:shadow-lg">Access
+                            Institutional</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us -->
+        <section class="py-32">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid md:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-5xl font-bold tracking-tighter mb-12">The Apex Advantage</h2>
+                        <div class="space-y-10">
+                            <div class="flex gap-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined" data-icon="security">security</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-1">Institutional Transparency</h4>
+                                    <p class="text-on-surface-variant">We show real trades, real losses, and real wins.
+                                        No cherry-picked results.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-1">Psychological Edge</h4>
+                                    <p class="text-on-surface-variant">Trading is 90% mental. We focus heavily on risk
+                                        management and discipline.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                                    <span class="material-symbols-outlined" data-icon="update">update</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-1">Evolving Curriculum</h4>
+                                    <p class="text-on-surface-variant">Markets change. Our strategies are constantly
+                                        updated to reflect current volatility.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-high rounded-2xl p-2 shadow-inner">
+                        <img alt="Professional Setup" class="rounded-xl w-full shadow-lg"
+                            data-alt="A clean top-down view of an organized desk with a laptop displaying a complex financial chart with cyan and red candle bars"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0svcmHa_j9WIyjE2kO51fwppFCk18CpVnc4aA718nemah6Juqizlno0_s7Jdln1McFzXBfFGV2ZTp12ZzeU17AwV7-Y0ZgyXFgBWTQKs8xGaIPrhy81QOcO52gPPdMlzU9K0LJYUKavCPdldddES3OFawhO_vLxZYm2gsORilLm328w4oBUqoMGN0kvXkOq-V3Sb5nwIgIQERLYUUFXv7XubXgyusPPpTf8Kf0cAnKb3aHQPLloEAepXSx5P_JtsZ8q08jwWhZdk" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-32 bg-surface-container-low/50 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tighter mb-20 text-center">Voices of Success</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+                        <div class="flex gap-1 text-primary mb-6">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-on-surface-variant italic mb-8">"Apex Ledger transformed my approach to the
+                            markets. I went from gambling to trading with a clear business plan. The community is
+                            invaluable."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                                <img alt="Student 1" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv56neSJdXKSlOGKHr4WriAgDN9LNcc1fPvR6ODBWRhmaBnWbenWPikkTcYmyp-FRkAOuGDvdxbxFf7rpALLqVKoSsWl_iaFMXsQLHWGjSW3zesZ2MVjRinawL2OAX2i1_JwLzj4Dz8Vqb7gVRx6bAcg_skLT8c0t0WbsVZgGXjOnB4k18BhjdNuSUiaJ9UCz1ysyaEWv-chE-ZvQ18Yg5Syi0s7KVEAIGO0oM9arn41X-NpuZhxp8lGKSr0hFEaUndKaCc1Rww_8" />
+                            </div>
+                            <div>
+                                <div class="font-bold">Marcus Sterling</div>
+                                <div class="text-xs text-on-surface-variant">Full-time Trader</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+                        <div class="flex gap-1 text-primary mb-6">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-on-surface-variant italic mb-8">"The institutional mentorship here is something
+                            you won't find on YouTube. The direct access to experts changed my life."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                                <img alt="Student 2" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHbw8dohbfFtsYzEljiuitMu4iWcR8Rpce7wZrrBElAvz_l9574_UZsrXJD1ppXTwvrL6IwNqT4aW1sY9tiwKlbC9E5aTuuVky7CAM0WDLCnl_Rsdf1bZJLtOJC4fjH3IaCo1uJfq5siyprWPE6eN0bu8q7bgpIYHhqIjql-yl_9im6JyhXxDpjb4W5GbmliYOfl_2pShi-cZFmN4_X3xaaCzFPTzkfnxZpjNH85Fiz6I17V_q2FNHRfA7xB14Pci8KVujRQU2EKg" />
+                            </div>
+                            <div>
+                                <div class="font-bold">Elena Rodriguez</div>
+                                <div class="text-xs text-on-surface-variant">Private Investor</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+                        <div class="flex gap-1 text-primary mb-6">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-on-surface-variant italic mb-8">"I finally understand why I was losing. Their
+                            risk management framework is the best in the industry. Highly recommend."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                                <img alt="Student 3" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3hg3-ms1G137ZBHEVhpAsFfiz6ChzJSNgiAcW6P140H6Kcwu4qqM_pucURCiC08hJTii4vg5rfIPoWl7Z2r1i46Eek66R6ZbUW0l54REZAGi5JKoZbFoNQRu7TGAcF3ZXeoOEgRyCPyOOjB5arNuaFvq677StFvZRUOdQkPTTDs8Ll0_hE2e0phnJ08fPXx_PbUKR8e59RjRFwSz6JQY4jrl4sXyCaWKmy5VWLVEtI1GcAQvAPa0qNhV_3m1hLga1YOXHSd4dw-8" />
+                            </div>
+                            <div>
+                                <div class="font-bold">David Chen</div>
+                                <div class="text-xs text-on-surface-variant">Academy Alumni</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Footer Section -->
+        <section class="py-24 px-8">
+            <div
+                class="max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-primary to-primary-container p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-primary/30">
+                <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                    <img alt="Background Texture" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY2vavjsS2-dY8Lt-VGNuaDD70USM9GtkuZwBStanCmLo0ukLI4-Waz0N8U-xbKDQ1p4eBpfVGmBCPPxEQ-Gk4Anrr9ksGJZge_r5bl2nxQEn2zLMJ_4u4w3iYao2g9bPWYOLlh_NTquP3PHJ-BHiFZJ4pyFgDleYQr4ckfoxxaKFJC3cWFz1cRjTL7bPBlWDQC8vRureNxsl4UNJ2xgTLy2PORxFdA747pMqtrod5Xie3ciP6vzOjZtUNh_tcHPQ1yVDmdr9JvoA" />
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-6xl font-black text-on-primary mb-8 tracking-tighter">Ready to dominate
+                        the markets?</h2>
+                    <p class="text-on-primary/80 text-lg mb-12 max-w-2xl mx-auto">Join the ranks of successful traders
+                        today. Your seat at the table is waiting.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button
+                            class="bg-surface-container-lowest text-primary px-10 py-4 rounded-lg font-bold shadow-xl hover:bg-on-primary transition-all">Get
+                            Started Now</button>
+                        <button
+                            class="bg-primary-container text-on-primary border border-on-primary/30 px-10 py-4 rounded-lg font-bold hover:bg-white/10 transition-all">Speak
+                            to an Advisor</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-slate-100 dark:bg-slate-900 full-width bottom-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div>
+                <div class="text-xl font-black text-violet-800 dark:text-violet-200 mb-6 uppercase tracking-widest">Apex
+                    Ledger</div>
+                <p class="text-slate-500 max-w-sm text-sm font-medium leading-relaxed">The premier destination for
+                    serious forex traders. Institutional wisdom, retail accessibility.</p>
+                <div class="mt-8 flex gap-6">
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="public">public</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="share">share</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="terminal">terminal</span></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Platform</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Academy</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Signals</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Community</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Mentorship</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Support</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Help Center</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Risk Disclosure</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="border-t border-slate-200 dark:border-slate-800 py-8 px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">© 2024 Apex Ledger.
+                All rights reserved.</div>
+            <div class="flex gap-8">
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Platform</a>
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Help Center</a>
+            </div>
+        </div>
+    <!-- GSAP & Lenis for Smooth Scroll & Parallax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+
+    <script>
+        // Initialize Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Integrate Lenis with ScrollTrigger
+        lenis.on('scroll', ScrollTrigger.update);
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+
+        gsap.ticker.lagSmoothing(0);
+
+        // Hero Parallax Effect
+        gsap.to(".hero-video", {
+            scrollTrigger: {
+                trigger: ".hero-parallax",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            },
+            yPercent: 30,
+            ease: "none"
+        });
+
+        // Scroll Reveal Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

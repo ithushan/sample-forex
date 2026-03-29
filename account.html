@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login | Apex Ledger</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#ccc3d8",
+                        "primary-container": "#7c3aed",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "tertiary": "#005766",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-secondary-fixed-variant": "#572ba0",
+                        "surface-dim": "#d3daef",
+                        "primary-fixed": "#eaddff",
+                        "surface-container-highest": "#dce2f7",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#25005a",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-container": "#b188ff",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container": "#e9edff",
+                        "surface-container-low": "#f1f3ff",
+                        "surface-tint": "#732ee4",
+                        "on-error": "#ffffff",
+                        "outline": "#7b7487",
+                        "secondary-fixed": "#ebdcff",
+                        "on-secondary-fixed": "#260059",
+                        "on-surface": "#141b2b",
+                        "background": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#141b2b",
+                        "primary-fixed-dim": "#d2bbff",
+                        "inverse-surface": "#293040",
+                        "inverse-on-surface": "#edf0ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001f26",
+                        "primary": "#630ed4",
+                        "tertiary-container": "#007184",
+                        "tertiary-fixed": "#acedff",
+                        "surface-variant": "#dce2f7",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#ede0ff",
+                        "on-tertiary-container": "#b7efff",
+                        "secondary": "#6f46b9",
+                        "on-secondary-container": "#44118d",
+                        "surface-container-high": "#e1e8fd",
+                        "inverse-primary": "#d2bbff",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#4a4455"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f9f9ff;
+        }
+    </style>
+</head>
+
+<body class="text-on-surface overflow-x-hidden">
+    <main class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+        <!-- Left Column: Branding & Visuals (Editorial Feel) -->
+        <section class="hidden lg:flex flex-col justify-between p-12 bg-primary relative overflow-hidden">
+            <div class="relative z-10">
+                <a href="index.html" class="text-2xl font-bold tracking-tighter text-on-primary mb-24 block hover:opacity-80 transition-opacity whitespace-nowrap">
+                    Apex Ledger
+                </a>
+                <div class="max-w-md">
+                    <h1
+                        class="text-display-lg text-5xl font-extrabold text-on-primary tracking-tighter leading-tight mb-6">
+                        The Future of <br />Forex Precision.
+                    </h1>
+                    <p class="text-on-primary/80 text-lg font-medium leading-relaxed">
+                        Access institutional-grade liquidity and editorial-style data visualization designed for the
+                        professional trader.
+                    </p>
+                </div>
+            </div>
+            <!-- Asymmetric Bento-style Decorative Element -->
+            <div class="relative z-10 grid grid-cols-2 gap-4 mt-12">
+                <div class="bg-white/10 backdrop-blur-xl p-6 rounded-lg border border-white/10">
+                    <span class="material-symbols-outlined text-on-primary mb-4" data-icon="insights">insights</span>
+                    <div class="text-on-primary font-bold text-xl">Real-time Pulse</div>
+                    <div class="text-on-primary/60 text-sm">Millisecond execution on 50+ pairs.</div>
+                </div>
+                <div class="bg-primary-container/40 backdrop-blur-xl p-6 rounded-lg border border-white/10 mt-8">
+                    <span class="material-symbols-outlined text-on-primary mb-4" data-icon="security">security</span>
+                    <div class="text-on-primary font-bold text-xl">Fortress Logic</div>
+                    <div class="text-on-primary/60 text-sm">Multi-layer encryption for your assets.</div>
+                </div>
+            </div>
+            <!-- Abstract Background Visual -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-[-10%] right-[-10%] w-96 h-96 bg-violet-400/20 rounded-full blur-[120px]"></div>
+                <div class="absolute bottom-[-10%] left-[-10%] w-96 h-96 bg-violet-900/40 rounded-full blur-[120px]">
+                </div>
+                <img alt="Financial chart overlay"
+                    class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30"
+                    data-alt="abstract financial data visualization with clean lines and glowing cyan trends over a deep violet background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN9i5RfyrfPdDYmE-deh0lWgyFdBVHenWiWfb9jr8CHv1DVLJExXNudZZREtRgUwuKqn5iDTvDP9X6c6kUQZ3plJ1Vr9vD08rjPUM_ZrYdoVodPBpsMmaxqP2YIwjRI4DAHZMI_-FwzjnEPZOay8NkdsmLpYu2t8ytOrOsXg2tnViTT94Ggezz4WgVXpP0tuuYSOfLjVyuzMoHIpqYQg7-ULJ81WAqUfD7x0_mANt_I-ppRJ-TJz8rk4vTnx6Uzm4BTJ8cRUzI2fM" />
+            </div>
+        </section>
+        <!-- Right Column: Auth Form -->
+        <section class="flex items-center justify-center p-6 md:p-12 lg:p-24 bg-surface-bright">
+            <div class="w-full max-w-md space-y-8">
+                <div class="lg:hidden text-center mb-8">
+                    <a href="index.html" class="text-3xl font-black text-primary tracking-tighter hover:opacity-80 transition-opacity">Apex Ledger</a>
+                </div>
+                <div class="space-y-2">
+                    <h2 class="text-headline-lg text-3xl font-extrabold tracking-tight text-on-surface">Welcome back
+                    </h2>
+                    <p class="text-on-surface-variant font-medium">Please enter your details to access your terminal.
+                    </p>
+                </div>
+                <!-- Social Logins -->
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg font-semibold text-on-surface-variant text-sm">
+                        <img alt="Google" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWnwADkpJIYgRvaYWs2WyipBoGI76c1WCCghOykoFxQjJ4TI4dDwNy4omXFhhMtUFrgHVasEnHymHnm1jcqaIfXdTI_6bChvzatLam3nIrrR6DltU1hV1UkFhuMBil0AK71oGIejrHrwBBWaqqpYMHqhe4cAC0EspcwRemRAsNlsuz4QnruP4UTzHuE6otZSvV70_bnSoXForibQtl8WE5VDGu8RCJxCtKFhsBx9Nh7-LiuBaHK43go2QlMrChJZB4p42KN-xjedo" />
+                        Google
+                    </button>
+                    <button
+                        class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg font-semibold text-on-surface-variant text-sm">
+                        <img alt="Apple" class="w-5 h-5"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgfo6c5W32Zi4WRFXeU2a4Nq1VfOom0F9fajYb6-Xg8b0Jt2xseOAwvBdt5DDTM6lSZ7SgFvSv_Lwc9WYphc89PSGC1l3bFvjJbHIrZOlDPi7YSGWZ_7qruV_JcjC8kIPn03pASwQPnvIRhVN9STrTK5ENgp2zvqGjbv8JWQvp6K_tEl2Iq66B0GuUJjAuwWZwL-e3yv6JeLaKDZE7ul0vi1thTCNWJJ9Sn-9I0ZG8AZnRurtCRuWFAezkkmBEObRFfjIogCJiXow" />
+                        Apple
+                    </button>
+                </div>
+                <div class="relative flex items-center py-4">
+                    <div class="flex-grow border-t border-outline-variant/30"></div>
+                    <span class="flex-shrink mx-4 text-xs font-bold uppercase tracking-widest text-outline">Or continue
+                        with email</span>
+                    <div class="flex-grow border-t border-outline-variant/30"></div>
+                </div>
+                <form action="#" class="space-y-6">
+                    <div class="space-y-4">
+                        <div class="space-y-1.5">
+                            <label class="text-sm font-bold tracking-tight text-on-surface pl-1" for="email">Email
+                                address</label>
+                            <input
+                                class="w-full px-4 py-3.5 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-tertiary-fixed-dim focus:bg-surface-container-lowest transition-all placeholder:text-outline/60 text-on-surface font-medium"
+                                id="email" name="email" placeholder="name@company.com" type="email" />
+                        </div>
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between items-center pl-1">
+                                <label class="text-sm font-bold tracking-tight text-on-surface"
+                                    for="password">Password</label>
+                                <a class="text-xs font-bold text-primary hover:text-primary-container transition-colors"
+                                    href="#">Forgot password?</a>
+                            </div>
+                            <input
+                                class="w-full px-4 py-3.5 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-tertiary-fixed-dim focus:bg-surface-container-lowest transition-all placeholder:text-outline/60 text-on-surface font-medium"
+                                id="password" name="password" placeholder="••••••••" type="password" />
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary-container"
+                            id="remember" type="checkbox" />
+                        <label class="text-sm font-medium text-on-surface-variant" for="remember">Keep me logged in for
+                            30 days</label>
+                    </div>
+                    <button
+                        class="w-full py-4 px-6 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg rounded-lg shadow-xl shadow-primary/10 active:scale-[0.98] transition-all"
+                        type="submit">
+                        Sign In to Dashboard
+                    </button>
+                </form>
+                <p class="text-center text-sm font-medium text-on-surface-variant pt-4">
+                    Don't have an account?
+                    <a class="text-primary font-bold hover:underline underline-offset-4 ml-1" href="#">Create an
+                        account</a>
+                </p>
+                <footer class="pt-12 text-center">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-outline">
+                        © 2024 Apex Ledger. All rights reserved.
+                    </p>
+                </footer>
+            </div>
+        </section>
+    </main>
+    <!-- Visual Polish: Subtle Grain Texture Overlay -->
+    <div class="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-multiply">
+        <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilter">
+                <feturbulence basefrequency="0.65" numoctaves="3" stitchtiles="stitch" type="fractalNoise">
+                </feturbulence>
+            </filter>
+            <rect filter="url(#noiseFilter)" height="100%" width="100%"></rect>
+        </svg>
+    </div>
+</body>
+
+</html>

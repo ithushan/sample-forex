@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ForexPulse | Editorial Blog</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#732ee4",
+                        "on-secondary-container": "#44118d",
+                        "on-primary-fixed": "#25005a",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#edf0ff",
+                        "tertiary-container": "#007184",
+                        "surface-container-high": "#e1e8fd",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9ff",
+                        "surface-dim": "#d3daef",
+                        "on-secondary-fixed-variant": "#572ba0",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#e9edff",
+                        "secondary-container": "#b188ff",
+                        "outline": "#7b7487",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "surface-container-low": "#f1f3ff",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "on-secondary-fixed": "#260059",
+                        "outline-variant": "#ccc3d8",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container-highest": "#dce2f7",
+                        "tertiary-fixed": "#acedff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#eaddff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#4a4455",
+                        "primary-fixed-dim": "#d2bbff",
+                        "background": "#f9f9ff",
+                        "tertiary": "#005766",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#b7efff",
+                        "on-primary-container": "#ede0ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#141b2b",
+                        "secondary-fixed": "#ebdcff",
+                        "primary": "#630ed4",
+                        "surface": "#f9f9ff",
+                        "primary-container": "#7c3aed",
+                        "on-surface": "#141b2b",
+                        "inverse-surface": "#293040",
+                        "on-tertiary-fixed": "#001f26",
+                        "surface-variant": "#dce2f7",
+                        "secondary": "#6f46b9",
+                        "inverse-primary": "#d2bbff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Smooth Scroll & Reveal Helpers */
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 32px 64px -12px rgba(20, 27, 43, 0.06);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+    <!-- Top Navigation Bar -->
+    <header
+        class="bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 transition-all">
+        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-tighter text-violet-700 dark:text-violet-400 hover:opacity-90 transition-opacity whitespace-nowrap">Apex
+                Ledger</a>
+            <div class="hidden md:flex gap-8 font-manrope text-sm font-semibold tracking-tight">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="index.html">Home</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="about.html">About</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="trading.html">Academy</a>
+
+                <a class="text-violet-600 dark:text-violet-400 border-b-2 border-violet-500 pb-1 hover:text-violet-500 transition-colors duration-200"
+                    href="blog.html">Blog</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="account.html"
+                    class="text-slate-600 dark:text-slate-400 font-manrope text-sm font-semibold hover:text-violet-600 transition-colors">Login</a>
+                <a href="account.html"
+                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold active:scale-95 transition-all shadow-md shadow-primary/20">Register</a>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-24 pb-20 px-6 max-w-7xl mx-auto">
+        <!-- Section 1: Featured Post -->
+        <section class="mb-16 reveal">
+            <div
+                class="relative w-full h-[500px] lg:h-[600px] overflow-hidden rounded-xl group cursor-pointer bg-surface-container">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    data-alt="Modern trading desk with multiple monitors displaying complex financial charts and candlesticks in a dimly lit high-tech office"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXMEtGkqxk9JNtmgsSY8-fMZBFc4W0mqBzBliV2U2tJRAP_XnUG0h9lEUbV8nM4_7U8Fb7SMn21fRl74ZwqnKCjnjiXwJE-en_pg1dwqpitk14YSP1PrpgnMaAjIdPAG4pCPS1u2wwTPmtSGztYvIu9Rh_g5bnDLc6c9g2y1JCeojwr74_1143xsuqmb_AL8FO0jcM-6I4ND--UaOpIoShGl1b2PQ2YuEi4MCiXXEGk9gEqtAZsZTIvNmmOEFHWRMvL2n8720NPzk" />
+                <div class="absolute bottom-0 left-0 p-8 lg:p-12 z-20 max-w-3xl">
+                    <span
+                        class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest uppercase bg-tertiary-fixed text-on-tertiary-fixed rounded-full">Analysis</span>
+                    <h1 class="text-4xl lg:text-6xl font-extrabold text-white tracking-tighter mb-6 leading-[1.1]">
+                        Weekly Market Outlook: <br />Navigating the NFP
+                    </h1>
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed max-w-xl font-medium">
+                        As Non-Farm Payrolls approach, we dissect the volatility triggers and key support levels for the
+                        major pairs. Prepare your risk management for the pulse of the US economy.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-white text-sm">schedule</span>
+                            <span class="text-white/80 text-sm font-semibold tracking-tight">5 min read</span>
+                        </div>
+                        <span class="text-white/40">|</span>
+                        <span class="text-white/80 text-sm font-semibold tracking-tight">By Julian Vance</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2: Categories Filter -->
+        <section
+            class="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-surface-container-high pb-8">
+            <div class="flex flex-wrap gap-2">
+                <button class="px-6 py-2.5 bg-primary text-on-primary font-bold text-sm rounded-full transition-all">All
+                    Articles</button>
+                <button
+                    class="px-6 py-2.5 bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest font-bold text-sm rounded-full transition-all">Analysis</button>
+                <button
+                    class="px-6 py-2.5 bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest font-bold text-sm rounded-full transition-all">Education</button>
+                <button
+                    class="px-6 py-2.5 bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest font-bold text-sm rounded-full transition-all">News</button>
+                <button
+                    class="px-6 py-2.5 bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest font-bold text-sm rounded-full transition-all">Strategy</button>
+            </div>
+            <div class="relative">
+                <span
+                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+                <input
+                    class="pl-10 pr-4 py-2.5 bg-surface-container-low border-none rounded-lg text-sm w-full md:w-64 focus:ring-2 focus:ring-tertiary-fixed-dim focus:bg-surface-container-lowest outline-none transition-all"
+                    placeholder="Search insights..." type="text" />
+            </div>
+        </section>
+        <!-- Section 3: Article Grid (Editorial Bento-ish) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 reveal">
+            <!-- Article 1 -->
+            <article class="flex flex-col group cursor-pointer">
+                <div class="aspect-[16/10] overflow-hidden rounded-xl mb-6 bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Minimalist top-down view of a silver laptop and a smartphone showing financial candlestick charts on a clean white desk"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4LSXl415M0GyfAwkGh-tbTmCYs56ASosY3oh93cRGHwf6Yp9EipPn-Z2mdnE1hvvOA7l_7ddCleulmPUh0cGD4z0oOygZiEhJ2KvijgwTPxoRk3lVUjHwYxcgonBpi-QEJ3kEELS-TI9HrCW-UgdleyRuTDEb1RdrbXqTT2f799GS-XTuvN6o8A4ROJ8zww4Sgnz8TkN7xzoKXoA2NuJ8us-EOW1xvVctNf6TopqT2eh7pTL2YZxvG-moFFWeIizfzO-I492EhLQ" />
+                </div>
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-primary">Strategy</span>
+                    <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                    <span class="text-xs font-semibold text-outline tracking-tight">Nov 12, 2024</span>
+                </div>
+                <h3
+                    class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">
+                    Mastering Divergence: A Guide to Counter-Trend Accuracy</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Learn how to spot hidden discrepancies
+                    between price action and momentum oscillators to find high-probability reversal zones.</p>
+                <div class="mt-auto flex items-center justify-between">
+                    <span
+                        class="text-[11px] font-bold text-on-surface-variant/70 tracking-tighter uppercase flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">timer</span> 8 min read
+                    </span>
+                    <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </div>
+            </article>
+            <!-- Article 2 -->
+            <article class="flex flex-col group cursor-pointer">
+                <div class="aspect-[16/10] overflow-hidden rounded-xl mb-6 bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Stacks of crisp high-denomination euro and dollar bills in a sharp professional close-up with shallow depth of field"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb1ZPA7p3wv3EsJ4m5CTL8pQAem_x_uMGscY5Wl_-OaR2UsLpcRxKoVezzt3vbGvV4wq-JazQBGlrH7cojKRRLB57p8MHXAimXeAiZJ0Nq6ScLOTZE3A8pkIPPlN2jQ_4OTrWWib63zBJJw06fTLOGFA9U8cl4bBMfMOdW_K9O0IB5eg5WznoDZNfkeVDlD_C13PtRew2LTlHFST2b0rqzB5iGFVm7LOU2EDpngcb8jSpFhV5ZsSlgy8eQVfvPbJE7dg6jIDOHsm0" />
+                </div>
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-primary">News</span>
+                    <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                    <span class="text-xs font-semibold text-outline tracking-tight">Nov 10, 2024</span>
+                </div>
+                <h3
+                    class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">
+                    The ECB Decision: What it Means for EUR/USD Parity</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Central bank policies are shifting. We
+                    explore the hawkish tilt of the ECB and its immediate impact on Euro currency pairs.</p>
+                <div class="mt-auto flex items-center justify-between">
+                    <span
+                        class="text-[11px] font-bold text-on-surface-variant/70 tracking-tighter uppercase flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">timer</span> 4 min read
+                    </span>
+                    <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </div>
+            </article>
+            <!-- Article 3 -->
+            <article class="flex flex-col group cursor-pointer">
+                <div class="aspect-[16/10] overflow-hidden rounded-xl mb-6 bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Digital representation of global connectivity with glowing nodes and data lines over a dark blue world map"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoZjYGqcdtNLWsIQ4DU5tGujhAE-Bi3JN1zHgxEs1OpE4pF9prdYfd2gIO8xOpGQGdZ6gAAdFqNO39yeHr6blY1sYrQ-9TdZtFK3-tsHrNwDhTPKVNiIAArMk0jaDd0sd6jFmywiP5ovqpXynSHKNPfuddWdahH7W8QQBiK717TEQ--Y2ZTjMaDwuVRnMRtUaQuv8u6Nk25GDx4UV3N3gBGcigi-_lucJAueYTbjDaT7Wxtqx794s4XfOGIlDnidSrfMrdtA5VkTI" />
+                </div>
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-primary">Education</span>
+                    <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                    <span class="text-xs font-semibold text-outline tracking-tight">Nov 08, 2024</span>
+                </div>
+                <h3
+                    class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">
+                    Liquidity Providers: The Invisible Architects of Forex</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Understanding market depth and how
+                    tier-1 banks facilitate the trillions of dollars in daily currency exchange volume.</p>
+                <div class="mt-auto flex items-center justify-between">
+                    <span
+                        class="text-[11px] font-bold text-on-surface-variant/70 tracking-tighter uppercase flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">timer</span> 12 min read
+                    </span>
+                    <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </div>
+            </article>
+            <!-- Article 4 -->
+            <article class="flex flex-col group cursor-pointer">
+                <div class="aspect-[16/10] overflow-hidden rounded-xl mb-6 bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Professional workspace with a focused individual analyzing data on a tablet, sunlight filtering through a high-rise office window"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB22Ch4ibEUF6naJlxRqukQjLuUwYU6n89GxD-Y70UV9CHT5Jrd3oHH5BcXEb5R2S-njkhsQMN2goiOQVtVo49XHICdNvQNn3qSmq4gyr-kSVx3IoEbdYLVHbgrNrHf5ZZJmjK8G0shUeFmR-3y9-XqORVjyZYfRCq8VJ_-PRQ5uOvtPrMWBwwTKU6ABl_-UvaJWGMxbnXWisISZ2ne35VXrFAQa6wUt3YlhGibmrRbFp3GhG_q9AHEkvCQzg9W8e2y6g_N53TUz68" />
+                </div>
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-primary">Analysis</span>
+                    <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                    <span class="text-xs font-semibold text-outline tracking-tight">Nov 05, 2024</span>
+                </div>
+                <h3
+                    class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">
+                    Psychology of the Drawdown: Recovering with Discipline</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Trading is 90% mental. Discover the
+                    emotional frameworks used by professionals to bounce back after a losing streak.</p>
+                <div class="mt-auto flex items-center justify-between">
+                    <span
+                        class="text-[11px] font-bold text-on-surface-variant/70 tracking-tighter uppercase flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">timer</span> 6 min read
+                    </span>
+                    <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </div>
+            </article>
+            <!-- Article 5 -->
+            <article class="flex flex-col group cursor-pointer">
+                <div class="aspect-[16/10] overflow-hidden rounded-xl mb-6 bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Abstract visualization of financial data growth with rising green translucent bars over a clean gray background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxvrxe2Arj88QpH1Lh8UshhQDJ6vuBYwEknYBczyCFHjmodLwPOA_smmK9ymWOFTVE_mNsFkwkm7o34xtp981v0SNJoaK6KsRbmtEiQ4gOVCfAXOQEXyhi6VE6FrT5GF7EdKDuNcGupmQQvzwiEff4CEVOAk5-eLVT17qfLVYLdqg19AvIJ8EzkpjWYIcAMd0Uq125XeMnAJWRjF0rN6HY20DdkdWU0vOSYTaRh2UpKZ8AXZkEUSu_T4JsTTKHtdiywemB9WoQ6rU" />
+                </div>
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-primary">Strategy</span>
+                    <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                    <span class="text-xs font-semibold text-outline tracking-tight">Nov 03, 2024</span>
+                </div>
+                <h3
+                    class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">
+                    Carry Trade 101: Profit from Interest Differentials</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">A deep dive into the long-term
+                    investment strategy that banks use to capitalize on the yield gaps between global currencies.</p>
+                <div class="mt-auto flex items-center justify-between">
+                    <span
+                        class="text-[11px] font-bold text-on-surface-variant/70 tracking-tighter uppercase flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">timer</span> 10 min read
+                    </span>
+                    <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </div>
+            </article>
+            <!-- Article 6 -->
+            <article class="flex flex-col group cursor-pointer">
+                <div class="aspect-[16/10] overflow-hidden rounded-xl mb-6 bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Modern geometric architecture with sharp lines and glass reflecting a clear blue sky, symbolizing corporate precision"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr1pQiCViC4LVVVKPshP6ug6_mG-AAovZH8p-89iKIura_AGwydh4HSSUegVX-7XBws9Kaabco5NjSglg84AvDH2_cBYTN_jRNL_Oky2Hc4ZJSgvD0qwz-VIszA9iQKhffDkpA_QeECszF4MSEApvuM8rxw_NHtB4rgAYMHLukXYau_0n6twpXFEyW5h8XUn8QcPZjxKH19-V4dZKQGLuS9RVVyhQ28N4oZkSW_rCo8StpYTQ_X-QJ2DLuRmrAQVjymT38vHBPtT4" />
+                </div>
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-primary">News</span>
+                    <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                    <span class="text-xs font-semibold text-outline tracking-tight">Oct 30, 2024</span>
+                </div>
+                <h3
+                    class="text-2xl font-bold tracking-tight text-on-surface mb-3 group-hover:text-primary transition-colors leading-tight">
+                    Global Supply Chains and Their Hidden Forex Impact</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-6">How shipping delays and commodity
+                    shortages are currently dictating the strength of the G10 currency block.</p>
+                <div class="mt-auto flex items-center justify-between">
+                    <span
+                        class="text-[11px] font-bold text-on-surface-variant/70 tracking-tighter uppercase flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">timer</span> 5 min read
+                    </span>
+                    <span
+                        class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </div>
+            </article>
+        </section>
+        <!-- Pagination -->
+        <div class="mt-20 flex justify-center">
+            <nav class="flex items-center gap-2">
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg text-outline hover:bg-surface-container transition-colors">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-sm">1</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors font-bold text-sm">2</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors font-bold text-sm">3</button>
+                <span class="px-2 text-outline">...</span>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors font-bold text-sm">12</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg text-outline hover:bg-surface-container transition-colors">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </nav>
+        </div>
+    </main>
+    <!-- Section 4: Newsletter Signup -->
+    <section class="bg-surface-container py-24 reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed mb-8">
+                <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">mail</span>
+            </div>
+            <h2 class="text-4xl font-extrabold tracking-tighter text-on-surface mb-4">The Pulse in Your Inbox</h2>
+            <p class="text-on-surface-variant text-lg mb-10 max-w-2xl mx-auto">Get our curated weekly analysis, strategy
+                guides, and high-impact news summaries delivered before the market opens.</p>
+            <form class="flex flex-col md:flex-row items-stretch gap-4 max-w-lg mx-auto">
+                <input
+                    class="flex-1 px-6 py-4 rounded-xl bg-surface-container-lowest border-2 border-transparent focus:border-tertiary focus:ring-0 outline-none transition-all text-on-surface"
+                    placeholder="Your trading email" type="email" />
+                <button
+                    class="px-8 py-4 bg-tertiary hover:bg-tertiary-container text-on-tertiary font-bold rounded-xl transition-all shadow-lg shadow-tertiary/10"
+                    type="submit">Subscribe</button>
+            </form>
+            <p class="mt-6 text-xs text-outline">Join 15,000+ traders. No spam, just precision. <a
+                    class="text-tertiary font-semibold hover:underline" href="#">Privacy Policy</a></p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-900 full-width bottom-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div>
+                <div class="text-xl font-black text-violet-800 dark:text-violet-200 mb-6 uppercase tracking-widest">Apex
+                    Ledger</div>
+                <p class="text-slate-500 max-w-sm text-sm font-medium leading-relaxed">The premier destination for
+                    serious forex traders. Institutional wisdom, retail accessibility.</p>
+                <div class="mt-8 flex gap-6">
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="public">public</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="share">share</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="terminal">terminal</span></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Platform</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Academy</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Signals</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Community</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Mentorship</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Support</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Help Center</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Risk Disclosure</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="border-t border-slate-200 dark:border-slate-800 py-8 px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">© 2024 Apex Ledger.
+                All rights reserved.</div>
+            <div class="flex gap-8">
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Platform</a>
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis for Smooth Scroll & Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+
+    <script>
+        // Initialize Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Scroll Reveal Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

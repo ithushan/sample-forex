@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | ForexPulse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#732ee4",
+                        "on-secondary-container": "#44118d",
+                        "on-primary-fixed": "#25005a",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#edf0ff",
+                        "tertiary-container": "#007184",
+                        "surface-container-high": "#e1e8fd",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9ff",
+                        "surface-dim": "#d3daef",
+                        "on-secondary-fixed-variant": "#572ba0",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#e9edff",
+                        "secondary-container": "#b188ff",
+                        "outline": "#7b7487",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "surface-container-low": "#f1f3ff",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "on-secondary-fixed": "#260059",
+                        "outline-variant": "#ccc3d8",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container-highest": "#dce2f7",
+                        "tertiary-fixed": "#acedff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#eaddff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#4a4455",
+                        "primary-fixed-dim": "#d2bbff",
+                        "background": "#f9f9ff",
+                        "tertiary": "#005766",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#b7efff",
+                        "on-primary-container": "#ede0ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#141b2b",
+                        "inverse-surface": "#293040",
+                        "on-tertiary-fixed": "#001f26",
+                        "surface-variant": "#dce2f7",
+                        "secondary": "#6f46b9",
+                        "inverse-primary": "#d2bbff",
+                        "accent": "#06b6d4"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Smooth Scroll & Reveal Helpers */
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-primary">
+    <!-- TopNavBar -->
+    <header
+        class="bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 transition-all">
+        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-tighter text-violet-700 dark:text-violet-400 hover:opacity-90 transition-opacity">Apex
+                Ledger</a>
+            <div class="hidden md:flex gap-8 font-manrope text-sm font-semibold tracking-tight">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="index.html">Home</a>
+                <a class="text-violet-600 dark:text-violet-400 border-b-2 border-violet-500 pb-1 hover:text-violet-500 transition-colors duration-200"
+                    href="about.html">About</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="trading.html">Academy</a>
+
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="blog.html">Blog</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="account.html"
+                    class="text-slate-600 dark:text-slate-400 font-manrope text-sm font-semibold hover:text-violet-600 transition-colors">Login</a>
+                <a href="account.html"
+                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold active:scale-95 transition-all shadow-md shadow-primary/20">Register</a>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-16">
+        <!-- Section 1: Hero -->
+        <section class="relative overflow-hidden pt-20 pb-32">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="z-10">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-surface-container-high text-primary font-bold text-xs uppercase tracking-widest mb-6">Established
+                        2012</span>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tighter leading-none text-on-surface mb-8">
+                        Our Mission: Precision in <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Every
+                            Pip</span>
+                    </h1>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-xl">
+                        Apex Ledger was founded on the principle that traders deserve more than just a platform. They
+                        deserve an editorialized experience where institutional-grade technology meets world-class
+                        market analysis.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-lg font-bold text-sm shadow-xl">Join
+                            the Movement</button>
+                        <button
+                            class="bg-surface-container-high text-on-secondary-fixed-variant px-8 py-4 rounded-lg font-bold text-sm">View
+                            Markets</button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+                    <img alt="Our Team" class="relative z-10 w-full h-[500px] object-cover rounded-xl shadow-2xl"
+                        data-alt="A professional, diverse group of financial experts and developers collaborating in a modern, sun-drenched architectural office space with glass walls"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFyEH0u5m6anUIbRAO4hy7BQBWf95J8IrEEoca7sk6w6LTNITx7X9jZplYZPw4qQTJb-FjTacmT_r7q5q_-yFjkEBRym-W_c9KN697Cyp55ZUmh4RzzVFER2eiebKI4tRl1Hhlv6XHiE3B-IAjYQ5_8MVBKKSkApovko9RQ5Gupy6K6F3QXo8sIofthitaXsbamxWmDjKmGRikTfRP4UtG120Sv2TEDjFV-9LMeeet6X2o2i-CF_ZqhfQNgy6T6Iz6OltFUiL8dGo" />
+                </div>
+            </div>
+        </section>
+        <!-- Section 2: The Apex Difference -->
+        <section class="py-24 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl font-extrabold tracking-tighter text-on-surface mb-4">The Apex Difference</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto">Elevating the retail trading experience through
+                        a dual focus on technological supremacy and elite educational curation.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Bento Card 1 -->
+                    <div
+                        class="bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between group transition-all">
+                        <div>
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined text-primary">analytics</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Institutional-Grade Tech</h3>
+                            <p class="text-on-surface-variant leading-relaxed">Execute trades with the same low-latency
+                                infrastructure used by Tier-1 liquidity providers. Our proprietary bridge connects you
+                                directly to the heartbeat of the global markets.</p>
+                        </div>
+                        <div class="mt-8 pt-8 border-t border-outline-variant/20">
+                            <ul class="space-y-3">
+                                <li class="flex items-center text-sm font-semibold"><span
+                                        class="material-symbols-outlined text-accent mr-2 text-sm">check_circle</span>
+                                    5ms Average Execution Speed</li>
+                                <li class="flex items-center text-sm font-semibold"><span
+                                        class="material-symbols-outlined text-accent mr-2 text-sm">check_circle</span>
+                                    Deep Liquidity Aggregation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Bento Card 2 -->
+                    <div
+                        class="bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between group transition-all">
+                        <div>
+                            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined text-tertiary">menu_book</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Editorial-First Education</h3>
+                            <p class="text-on-surface-variant leading-relaxed">Beyond signals, we provide context. Our
+                                daily editorial briefs translate complex macroeconomic shifts into actionable trading
+                                insights for the discerning investor.</p>
+                        </div>
+                        <div class="mt-8 pt-8 border-t border-outline-variant/20">
+                            <ul class="space-y-3">
+                                <li class="flex items-center text-sm font-semibold"><span
+                                        class="material-symbols-outlined text-primary mr-2 text-sm">check_circle</span>
+                                    Daily Market Masterclasses</li>
+                                <li class="flex items-center text-sm font-semibold"><span
+                                        class="material-symbols-outlined text-primary mr-2 text-sm">check_circle</span>
+                                    Exclusive Analyst Community</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3: Our Story -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div class="max-w-xl">
+                        <h2 class="text-3xl font-extrabold tracking-tighter text-on-surface mb-4">Our Story</h2>
+                        <p class="text-on-surface-variant">A decade of evolution in the pursuit of trading perfection.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-surface-dim before:to-transparent">
+                    <!-- Item 1 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="text-xs font-bold">2012</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-6 rounded-xl">
+                            <h4 class="font-bold text-lg mb-1">The Seed</h4>
+                            <p class="text-sm text-on-surface-variant">Founded in London by a group of algorithmic
+                                traders frustrated by the lack of transparency in retail FX.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="text-xs font-bold">2016</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-6 rounded-xl">
+                            <h4 class="font-bold text-lg mb-1">Global Expansion</h4>
+                            <p class="text-sm text-on-surface-variant">Secured multi-jurisdictional licensing and opened
+                                hubs in Singapore and New York to provide 24/5 support.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="text-xs font-bold">2020</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-6 rounded-xl">
+                            <h4 class="font-bold text-lg mb-1">The Editorial Shift</h4>
+                            <p class="text-sm text-on-surface-variant">Launched the 'Pulse' initiative, transforming our
+                                data feeds into deep-dive editorial market analysis.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div
+                        class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <span class="text-xs font-bold">2024</span>
+                        </div>
+                        <div
+                            class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-surface-container-low p-6 rounded-xl">
+                            <h4 class="font-bold text-lg mb-1">The Apex Era</h4>
+                            <p class="text-sm text-on-surface-variant">Rebranding to Apex Ledger to reflect our
+                                commitment to definitive record-keeping and precision execution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4: The Team -->
+        <section class="py-24 bg-surface-container-high/30">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold tracking-tighter text-on-surface mb-4">The Minds Behind the Pulse
+                    </h2>
+                    <p class="text-on-surface-variant">Meet the veteran traders and technologists steering your trading
+                        journey.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Member 1 -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                        <img class="w-full h-72 object-cover"
+                            data-alt="Portrait of a senior male executive in a sharp navy suit, looking confident in a bright modern office setting with blurred city views"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3k1t6ghviqQQFQI68Dv8zP8KmNwW9LzmRtJ2w2JZtE3ska-J1aR-E9bdQ1Gf344-ElLEa6I_94YdQKaK_WkJP8O8oqoL8kj86Rkg9_Nk89zs2KMNNKGoGtSltklnpot6ZdCsQp2wdcQ4d1yvZDx6W3rTGTQtCP5JtXZueqhOKHn_EE8PW8bJInm2mi3rbzYMDguGPbnoffJiE6hUZhElLvNqVsmGcwl8jMJEE8tm2-mFe8KkTyxiP4bsZRr6eIuNEIZaLyPlatLA" />
+                        <div class="p-6">
+                            <h5 class="text-lg font-bold text-on-surface">Marcus Sterling</h5>
+                            <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Chief Strategy
+                                Officer</p>
+                            <p class="text-sm text-on-surface-variant">15 years at Goldman Sachs, now architecting our
+                                market logic.</p>
+                        </div>
+                    </div>
+                    <!-- Member 2 -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                        <img class="w-full h-72 object-cover"
+                            data-alt="Professional woman in business casual attire smiling warmly in a minimalist workspace, medium shot, soft daylighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAak6uwRwGne3jiVCrOtk28R_hLSDAQ6Q-_BTwcG-nI3j9gtZiixAKIwXPvVUQOjS90dRLJithOy6IgQEZS1tcA8DGtsbo-h8p4VGgAQagtYyBQdflODqK_bHSDveLXtv0X3peHynrTu6hb_SK765onbFJCOQfTjwPLSyNbhswFTyCum_CjxDZTa_nFo9LLrYdWQRRAmx_aZzQBoXE_BkeZATX9fm7QFzl7QwYb7KPFPOXUPdOyZCZg6QtZNsd9IxlP5qVSfpZANUQ" />
+                        <div class="p-6">
+                            <h5 class="text-lg font-bold text-on-surface">Elena Rodriguez</h5>
+                            <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Head of Education
+                            </p>
+                            <p class="text-sm text-on-surface-variant">Renowned macro-analyst and author of 'The
+                                Volatility Edge'.</p>
+                        </div>
+                    </div>
+                    <!-- Member 3 -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                        <img class="w-full h-72 object-cover"
+                            data-alt="Young male technologist with glasses in a tech-focused office environment, natural lighting, looking directly at camera"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0xatg-8E7bRC21_gLboSewO3Hzrt9mxhuz3d8eQuGyEIODrEkfBb-CSeLCWt9gxdtUudwmvxG3XtPNdZedb_8Qf6OfTiMAnPCD8YttCRc-bEv1In-XBV3T73ZFUqj38vbafJ18WA2ktjf05nQNLDcxFu0rGofxStzAF8AfRuAzLQLGunTBr_Wxk8-wQcLa83AHypBtkCtgTXm26sUzIr2zgqVyt9iyHA1QyOk5tKhRc7iW2WC70VQ8cLtQKjPp3DweEhUNyIniow" />
+                        <div class="p-6">
+                            <h5 class="text-lg font-bold text-on-surface">David Chen</h5>
+                            <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">CTO</p>
+                            <p class="text-sm text-on-surface-variant">HFT specialist focused on ultra-low latency
+                                execution systems.</p>
+                        </div>
+                    </div>
+                    <!-- Member 4 -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                        <img class="w-full h-72 object-cover"
+                            data-alt="Close-up portrait of a professional woman with a serious yet approachable expression, blurred office background with subtle blue tones"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIwQX6CKH-NU80006pp7oD-2MY6wcAItaiMAMCMnTcuRAvppddXVpMT63UIdyAG70Y1ihFiCmfDEl03yD5FeOo2fQ-H6zv9uCLqBbKC_1A7LkcNuppmbKrbzJBnhzgQjEmo1G70v-3HV8rQ1kvuhz-0FtYrAy_vWrvlAxCC_A9VDgqtSB8kRS2MQX2PBpUBMZZKAQukY1OueXo0klvz07WKwgBl8pnOb-wHNLNHP8HVwiPWlxF5CGWNxKQdHUI0oVP0pjBmDEZmu8" />
+                        <div class="p-6">
+                            <h5 class="text-lg font-bold text-on-surface">Sarah J. Miller</h5>
+                            <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Risk Compliance Lead
+                            </p>
+                            <p class="text-sm text-on-surface-variant">Ensuring the highest standards of fund safety and
+                                regulatory adherence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 5: Compliance & Trust -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div
+                    class="bg-gradient-to-br from-inverse-surface to-on-surface text-white p-12 lg:p-20 rounded-[2rem] relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2">
+                    </div>
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 class="text-4xl font-extrabold tracking-tighter mb-6">Security is Our Foundation, Not an
+                                Add-on</h2>
+                            <p class="text-on-primary-container/80 text-lg mb-8 leading-relaxed">
+                                We operate under the strictest regulatory frameworks globally. Your capital is held in
+                                segregated Tier-1 bank accounts, protected by advanced encryption and a dedicated
+                                risk-monitoring team available 24/7.
+                            </p>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined text-accent"
+                                        style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                                    <span class="font-bold">Fully Regulated &amp; Audited Monthly</span>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined text-accent"
+                                        style="font-variation-settings: 'FILL' 1;">lock</span>
+                                    <span class="font-bold">End-to-End Fund Encryption</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-3xl font-extrabold text-accent mb-1">$4B+</div>
+                                <div class="text-xs uppercase font-bold tracking-widest text-white/50">Daily Volume
+                                </div>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-3xl font-extrabold text-accent mb-1">120+</div>
+                                <div class="text-xs uppercase font-bold tracking-widest text-white/50">Countries</div>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-3xl font-extrabold text-accent mb-1">99.9%</div>
+                                <div class="text-xs uppercase font-bold tracking-widest text-white/50">Uptime</div>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-3xl font-extrabold text-accent mb-1">Tier-1</div>
+                                <div class="text-xs uppercase font-bold tracking-widest text-white/50">Liquidity</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-900 full-width bottom-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div>
+                <div class="text-xl font-black text-violet-800 dark:text-violet-200 mb-6 uppercase tracking-widest">Apex
+                    Ledger</div>
+                <p class="text-slate-500 max-w-sm text-sm font-medium leading-relaxed">The premier destination for
+                    serious forex traders. Institutional wisdom, retail accessibility.</p>
+                <div class="mt-8 flex gap-6">
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="public">public</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="share">share</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="terminal">terminal</span></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Platform</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Academy</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Signals</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Community</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Mentorship</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Support</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Help Center</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Risk Disclosure</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="border-t border-slate-200 dark:border-slate-800 py-8 px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">© 2024 Apex Ledger.
+                All rights reserved.</div>
+            <div class="flex gap-8">
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Platform</a>
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis for Smooth Scroll & Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+
+    <script>
+        // Initialize Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Scroll Reveal Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Academy | Apex Ledger</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#ccc3d8",
+                        "primary-container": "#7c3aed",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "tertiary": "#005766",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-secondary-fixed-variant": "#572ba0",
+                        "surface-dim": "#d3daef",
+                        "primary-fixed": "#eaddff",
+                        "surface-container-highest": "#dce2f7",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#25005a",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-container": "#b188ff",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container": "#e9edff",
+                        "surface-container-low": "#f1f3ff",
+                        "surface-tint": "#732ee4",
+                        "on-error": "#ffffff",
+                        "outline": "#7b7487",
+                        "secondary-fixed": "#ebdcff",
+                        "on-secondary-fixed": "#260059",
+                        "on-surface": "#141b2b",
+                        "background": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#141b2b",
+                        "primary-fixed-dim": "#d2bbff",
+                        "inverse-surface": "#293040",
+                        "inverse-on-surface": "#edf0ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001f26",
+                        "primary": "#630ed4",
+                        "tertiary-container": "#007184",
+                        "tertiary-fixed": "#acedff",
+                        "surface-variant": "#dce2f7",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#ede0ff",
+                        "on-tertiary-container": "#b7efff",
+                        "secondary": "#6f46b9",
+                        "on-secondary-container": "#44118d",
+                        "surface-container-high": "#e1e8fd",
+                        "inverse-primary": "#d2bbff",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#4a4455"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Smooth Scroll & Reveal Helpers */
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+    <!-- Top Navigation Bar -->
+    <header
+        class="bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 transition-all">
+        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-tighter text-violet-700 dark:text-violet-400 hover:opacity-90 transition-opacity whitespace-nowrap">Apex
+                Ledger</a>
+            <div class="hidden md:flex gap-8 font-manrope text-sm font-semibold tracking-tight">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="index.html">Home</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="about.html">About</a>
+                <a class="text-violet-600 dark:text-violet-400 border-b-2 border-violet-500 pb-1 hover:text-violet-500 transition-colors duration-200"
+                    href="trading.html">Academy</a>
+
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="blog.html">Blog</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="account.html"
+                    class="text-slate-600 dark:text-slate-400 font-manrope text-sm font-semibold hover:text-violet-600 transition-colors">Login</a>
+                <a href="account.html"
+                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold active:scale-95 transition-all shadow-md shadow-primary/20">Register</a>
+            </div>
+        </nav>
+    </header>
+    <main class="max-w-7xl mx-auto px-8 py-16 space-y-24">
+        <!-- CTA Section -->
+        <section class="reveal grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-8">
+                <div class="inline-flex items-center gap-2 bg-surface-container-high px-4 py-1.5 rounded-full">
+                    <span class="material-symbols-outlined text-sm text-tertiary-container">school</span>
+                    <span class="text-xs font-bold tracking-widest uppercase text-tertiary-container">Master the
+                        Markets</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter leading-tight text-on-surface">
+                    Elevate Your Trading with <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-tertiary-container">Precision
+                        Education</span>
+                </h1>
+                <p class="text-lg text-on-surface-variant max-w-2xl font-medium leading-relaxed">
+                    Apex Ledger Academy transforms complex market mechanics into actionable editorial-grade insights.
+                    Experience the clarity required to navigate high-volatility sessions with professional calm.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <div
+                        class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg transition-all hover:bg-surface-container-lowest">
+                        <span class="material-symbols-outlined text-tertiary">query_stats</span>
+                        <div>
+                            <p class="text-sm font-bold text-on-surface">24/7 Liquidity</p>
+                            <p class="text-xs text-on-surface-variant">Trade whenever the world is awake.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg transition-all hover:bg-surface-container-lowest">
+                        <span class="material-symbols-outlined text-tertiary">balance</span>
+                        <div>
+                            <p class="text-sm font-bold text-on-surface">Precision Leverage</p>
+                            <p class="text-xs text-on-surface-variant">Maximize capital efficiency safely.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center gap-3 p-4 bg-surface-container-low rounded-lg transition-all hover:bg-surface-container-lowest">
+                        <span class="material-symbols-outlined text-tertiary">public</span>
+                        <div>
+                            <p class="text-sm font-bold text-on-surface">Global Scale</p>
+                            <p class="text-xs text-on-surface-variant">Access the largest market on Earth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="absolute inset-0 bg-primary-fixed-dim rounded-xl opacity-20 blur-3xl -z-10"></div>
+                <div class="rounded-xl overflow-hidden shadow-2xl shadow-primary/10">
+                    <img alt="Forex Trading Desk" class="w-full h-[500px] object-cover"
+                        data-alt="Modern professional office with multiple trading monitors displaying complex financial charts in a dark violet aesthetic with neon cyan accents"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZgFMy0htDjveJ3NCSgqehKpHwcZGazsjMyVBSndyqSwDEc2b8ESqVG6NpZFsoIlPvvQt3CObYIdP-GiRrF83eSdJwcI9bEo0IQzIlWTzut9ttyGT6HMhGy6l9Vc8lpYMSmJJLBTTVBPbWzn9HBqxaP8Pt397-qVSW0sB1Wp5iqcW-4YN-DXCI6A3cx_4veymnees9Y6XYlJ1JAJc4re_Sk9G-_iFI7P4L0Fc9Y5wyTwrhUa_XSeaBOGeEGdKDVHf464CUXoKxofM" />
+                </div>
+                <div
+                    class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-lg shadow-xl border-l-4 border-tertiary">
+                    <p class="text-3xl font-black text-on-surface tracking-tighter">98%</p>
+                    <p class="text-xs font-bold uppercase text-on-surface-variant tracking-widest">Student Success Rate
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Academy Levels Grid -->
+        <section class="reveal space-y-12">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface">Curated Learning Paths
+                </h2>
+                <p class="text-on-surface-variant max-w-xl mx-auto">Select the tier that aligns with your professional
+                    growth and capital management objectives.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Card -->
+                <div
+                    class="bg-surface-container-low rounded-lg p-8 flex flex-col h-full transition-all hover:bg-surface-container-lowest">
+                    <div class="space-y-4 mb-8">
+                        <span
+                            class="text-xs font-black uppercase tracking-widest text-on-surface-variant opacity-60">Foundation</span>
+                        <h3 class="text-2xl font-bold text-on-surface">Basic</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold text-on-surface">$49</span>
+                            <span class="text-sm text-on-surface-variant font-medium">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-12 flex-grow">
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                            Forex Fundamentals 101
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                            Basic Technical Analysis
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                            Community Access
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface opacity-40">
+                            <span class="material-symbols-outlined text-lg">cancel</span>
+                            Live Trading Sessions
+                        </li>
+                    </ul>
+                    <button onclick="window.location.href='package.html'"
+                        class="w-full bg-surface-container-high text-on-secondary-fixed-variant py-3 rounded-lg font-bold text-sm transition-colors hover:bg-surface-container-highest active:scale-95">
+                        View Details
+                    </button>
+                </div>
+                <!-- Standard Card (Featured) -->
+                <div
+                    class="relative bg-surface-container-lowest rounded-lg p-8 flex flex-col h-full shadow-2xl shadow-primary/5 ring-2 ring-primary">
+                    <div
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest text-on-primary">
+                        Most Popular
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <span class="text-xs font-black uppercase tracking-widest text-primary">Advanced</span>
+                        <h3 class="text-2xl font-bold text-on-surface">Standard</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold text-on-surface">$129</span>
+                            <span class="text-sm text-on-surface-variant font-medium">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-12 flex-grow">
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Algorithmic Strategy Intro
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Risk Management Frameworks
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Weekly Live Sessions
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Prop Firm Roadmap
+                        </li>
+                    </ul>
+                    <button onclick="window.location.href='package.html'"
+                        class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-3 rounded-lg font-bold text-sm transition-all hover:opacity-90 active:scale-95">
+                        View Details
+                    </button>
+                </div>
+                <!-- Premium Card -->
+                <div
+                    class="bg-surface-container-low rounded-lg p-8 flex flex-col h-full transition-all hover:bg-surface-container-lowest">
+                    <div class="space-y-4 mb-8">
+                        <span
+                            class="text-xs font-black uppercase tracking-widest text-on-surface-variant opacity-60">Elite</span>
+                        <h3 class="text-2xl font-bold text-on-surface">Premium</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-extrabold text-on-surface">$299</span>
+                            <span class="text-sm text-on-surface-variant font-medium">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-12 flex-grow">
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                            1-on-1 Mentorship
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                            Daily Signal Analysis
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                            Private Discord Mastermind
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
+                            <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                            Custom Strategy Coding
+                        </li>
+                    </ul>
+                    <button onclick="window.location.href='package.html'"
+                        class="w-full bg-surface-container-high text-on-secondary-fixed-variant py-3 rounded-lg font-bold text-sm transition-colors hover:bg-surface-container-highest active:scale-95">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Bento Grid Feature Section -->
+        <section class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+            <div
+                class="md:col-span-2 md:row-span-2 bg-surface-container rounded-lg p-10 flex flex-col justify-end relative overflow-hidden group">
+                <img alt="Market Analysis"
+                    class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30 group-hover:scale-105 transition-transform duration-700"
+                    data-alt="Close up of a professional stock market ticker and charts with glowing blue and green lines on a dark interface"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQbjNM3cBYW6XN_xCovmT0pAF-aAk0UlfZ2kyvyDRN916vr7LFVX9O48aU2Gh7aYoHMSrDxARGYkwQdJCAFFKtMqyXVLIeO4sN35sCIDkAt_Pv9mxYpqhPH9S7kmm1Q6ox4I1XAxDmZ2V8Xl1tdptOK4OBBETerXWiiLKLv6Om-J3znCyb-NB9umCDwiSbTLHcK992DAuti3VPejTKb7kh98VNIY4TP3O611P_CE1KEsslBoVG81VM93V8vGKId8vgV8P5tQd-QVo" />
+                <div class="relative z-10 space-y-4">
+                    <h4 class="text-3xl font-extrabold tracking-tight text-on-surface">Real-Time Editorial Analysis</h4>
+                    <p class="text-on-surface-variant max-w-sm">Every morning, our lead analysts dissect the London open
+                        to give you the exact pulse of the market.</p>
+                </div>
+            </div>
+            <div
+                class="md:col-span-2 bg-tertiary-container rounded-lg p-8 flex items-center gap-6 text-on-tertiary-container">
+                <div class="bg-on-tertiary-container/10 p-4 rounded-lg">
+                    <span class="material-symbols-outlined text-4xl" data-weight="fill">insights</span>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold">Smart Liquidity Tracking</h4>
+                    <p class="text-sm opacity-80">Understand where the "Smart Money" is positioning before the move
+                        happens.</p>
+                </div>
+            </div>
+            <div class="bg-surface-container-high rounded-lg p-8 flex flex-col justify-between">
+                <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+                <p class="text-sm font-bold text-on-surface">Psychological Fortress</p>
+            </div>
+            <div class="bg-surface-container-high rounded-lg p-8 flex flex-col justify-between">
+                <span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+                <p class="text-sm font-bold text-on-surface">Certified Strategies</p>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-900 full-width bottom-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div>
+                <div class="text-xl font-black text-violet-800 dark:text-violet-200 mb-6 uppercase tracking-widest">Apex
+                    Ledger</div>
+                <p class="text-slate-500 max-w-sm text-sm font-medium leading-relaxed">The premier destination for
+                    serious forex traders. Institutional wisdom, retail accessibility.</p>
+                <div class="mt-8 flex gap-6">
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="public">public</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="share">share</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="terminal">terminal</span></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Platform</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Academy</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Signals</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Community</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Mentorship</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Support</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Help Center</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Risk Disclosure</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="border-t border-slate-200 dark:border-slate-800 py-8 px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">© 2024 Apex Ledger.
+                All rights reserved.</div>
+            <div class="flex gap-8">
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Platform</a>
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis for Smooth Scroll & Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+
+    <script>
+        // Initialize Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Scroll Reveal Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Apex Ledger - Advanced Forex Mastery</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#ccc3d8",
+                        "primary-container": "#7c3aed",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "tertiary": "#005766",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-secondary-fixed-variant": "#572ba0",
+                        "surface-dim": "#d3daef",
+                        "primary-fixed": "#eaddff",
+                        "surface-container-highest": "#dce2f7",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#25005a",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-container": "#b188ff",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container": "#e9edff",
+                        "surface-container-low": "#f1f3ff",
+                        "surface-tint": "#732ee4",
+                        "on-error": "#ffffff",
+                        "outline": "#7b7487",
+                        "secondary-fixed": "#ebdcff",
+                        "on-secondary-fixed": "#260059",
+                        "on-surface": "#141b2b",
+                        "background": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#141b2b",
+                        "primary-fixed-dim": "#d2bbff",
+                        "inverse-surface": "#293040",
+                        "inverse-on-surface": "#edf0ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#001f26",
+                        "primary": "#630ed4",
+                        "tertiary-container": "#007184",
+                        "tertiary-fixed": "#acedff",
+                        "surface-variant": "#dce2f7",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#ede0ff",
+                        "on-tertiary-container": "#b7efff",
+                        "secondary": "#6f46b9",
+                        "on-secondary-container": "#44118d",
+                        "surface-container-high": "#e1e8fd",
+                        "inverse-primary": "#d2bbff",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#4a4455"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Smooth Scroll & Reveal Helpers */
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface antialiased">
+    <!-- Top Navigation Bar -->
+    <header
+        class="bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 transition-all">
+        <nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-tighter text-violet-700 dark:text-violet-400 hover:opacity-90 transition-opacity whitespace-nowrap">Apex
+                Ledger</a>
+            <div class="hidden md:flex gap-8 font-manrope text-sm font-semibold tracking-tight">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="index.html">Home</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="about.html">About</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="trading.html">Academy</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="blog.html">Blog</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-violet-600 transition-colors duration-200"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="account.html"
+                    class="text-slate-600 dark:text-slate-400 font-manrope text-sm font-semibold hover:text-violet-600 transition-colors">Login</a>
+                <a href="account.html"
+                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold active:scale-95 transition-all shadow-md shadow-primary/20">Register</a>
+            </div>
+        </nav>
+    </header>
+    <main class="max-w-7xl mx-auto px-8 py-12">
+        <!-- Hero / Course Overview Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24 reveal">
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-surface-container-high mb-6">
+                    <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Advanced
+                        Curriculum</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tighter text-on-surface mb-6 leading-none">
+                    Institutional <br /><span class="text-primary">Forex Strategies</span>
+                </h1>
+                <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed mb-8">
+                    Master the mechanics of global liquidity. This comprehensive module focuses on order-flow analysis,
+                    psychological risk management, and algorithmic execution models used by top-tier desks.
+                </p>
+                <div class="flex flex-wrap gap-6 mb-10">
+                    <div class="flex items-center space-x-3">
+                        <span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+                        <span class="font-semibold text-sm">48 Hours Content</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="material-symbols-outlined text-primary" data-icon="bar_chart">bar_chart</span>
+                        <span class="font-semibold text-sm">Expert Level</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+                        <span class="font-semibold text-sm">CPD Certified</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-4 rounded-lg text-lg font-bold shadow-lg hover:shadow-xl transition-all active:scale-95">
+                        Enroll Now — $999
+                    </button>
+                    <button
+                        class="px-8 py-4 rounded-lg font-semibold text-primary hover:bg-surface-container transition-colors">
+                        Download Syllabus
+                    </button>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 bg-tertiary-fixed-dim rounded-full opacity-20 blur-2xl">
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-2xl bg-surface-container-highest">
+                    <img alt="Forex Trading Professional"
+                        class="w-full h-[500px] object-cover mix-blend-multiply opacity-90"
+                        data-alt="Professional trader focused on multiple high-resolution monitors showing complex financial candlestick charts in a dimly lit modern office with blue and purple ambient lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPREeF03bkiLPNgfXnW3z2I-aC5pgvRswWH1sADrbW9KDMqm-67OANVKpeFdvvPK9P6JQuLNCDQG201N1Ey42iX6TehaQWa7FZMQjv8pmVCziwCM9FjsM_AToWtw6rDK2NsmN5-58SxqV9mB32r7jHaSvPpDuIJEg39CrEiO55ZJ14USgBKHyDLfD-wZlmEGHaw81hl-PZHrI46ABuqnuDPraQhzhOMh_y-T_fDYtJKud7ZpyqycTl7IT_SGUdF06UsF9X5BQ1CIw" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+                    <div
+                        class="absolute bottom-6 left-6 right-6 p-6 backdrop-blur-md bg-surface-container-lowest/30 rounded-lg border border-white/10">
+                        <p class="text-white text-sm font-medium italic">"The most precise roadmap to
+                            institutional-level trading I've ever followed."</p>
+                        <p class="text-tertiary-fixed-dim text-xs font-bold mt-2">— Marcus Sterling, Senior Quant</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bento Grid: Video & PDF Preview -->
+        <section class="mb-24 reveal">
+            <h2 class="text-3xl font-bold tracking-tight mb-12 flex items-center gap-4">
+                Learning Materials <span class="h-px flex-1 bg-surface-container-high"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Video Preview Large -->
+                <div class="md:col-span-2 bg-surface-container-low rounded-xl p-8 relative overflow-hidden group">
+                    <div class="flex justify-between items-start mb-16 relative z-10">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">High-Definition Lectures</h3>
+                            <p class="text-on-surface-variant max-w-sm">Over 120 4K video modules with live trade
+                                walk-throughs and execution breakdowns.</p>
+                        </div>
+                        <span class="material-symbols-outlined text-4xl text-primary"
+                            data-icon="video_library">video_library</span>
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden aspect-video shadow-lg">
+                        <img alt="Trading Dashboard" class="w-full h-full object-cover"
+                            data-alt="A clean high-end trading dashboard interface displayed on a large screen with glowing cyan price lines and deep violet background gradients"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAat0SIbokfcozWdwm0IoeEKMN2A1V573KNZ7g_mG07qwlJDAi3Ldjo8A3XPbZ5BdQDppp9183o6gO5LlhrVrjE_HwVHpOZ5g7s1ZM4-kYoxqjzTFbgz6SIZL7lvGYgQSk2yA902KIIheL2QM9OyRCFBIJRS40_j4JarxMwVXe7xCnD1zEefKj_0kQG5ho--JdEyrUY5OOh3faxGCWwZ7lBlGHUqInoma2XuQWNPjZH2UH6WYbVl9Kb1Xqct0dwDQzbSLwtKjxNBU" />
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-on-surface/20 group-hover:bg-on-surface/40 transition-all cursor-pointer">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                                <span class="material-symbols-outlined text-primary text-3xl" data-icon="play_arrow"
+                                    data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PDF / Documentation Small -->
+                <div class="flex flex-col gap-6">
+                    <div class="bg-surface-container-highest rounded-xl p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="material-symbols-outlined text-primary mb-4"
+                                data-icon="menu_book">menu_book</span>
+                            <h3 class="text-xl font-bold mb-2 text-on-surface">Strategic Playbooks</h3>
+                            <p class="text-sm text-on-surface-variant">Downloadable PDF guides detailing entry/exit
+                                rules and liquidity zones.</p>
+                        </div>
+                        <div
+                            class="mt-4 flex items-center justify-between text-xs font-bold text-primary tracking-widest uppercase">
+                            <span>14 Manuals</span>
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-primary text-on-primary rounded-xl p-6 flex-1 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 opacity-10">
+                            <span class="material-symbols-outlined text-9xl" data-icon="psychology">psychology</span>
+                        </div>
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold mb-2">Behavioral Analysis</h3>
+                            <p class="text-sm text-on-primary/80">Psychological assessments to identify and correct your
+                                trading biases.</p>
+                        </div>
+                        <button
+                            class="mt-4 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-colors w-max">
+                            Preview Tool
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modules List (Asymmetric Editorial Style) -->
+        <section class="mb-24 reveal">
+            <div class="max-w-3xl mb-16">
+                <h2 class="text-4xl font-extrabold tracking-tighter mb-4">Core Modules</h2>
+                <p class="text-on-surface-variant">Each module is designed to build upon the last, transforming your
+                    perspective from a retail trader to a liquidity provider.</p>
+            </div>
+            <div class="space-y-4">
+                <!-- Module 01 -->
+                <div
+                    class="group bg-surface hover:bg-surface-container-low transition-all duration-300 rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center">
+                    <div
+                        class="text-6xl font-black text-surface-container-highest group-hover:text-primary-fixed-dim transition-colors tracking-tighter">
+                        01</div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-bold mb-1">Market Microstructure</h4>
+                        <p class="text-on-surface-variant text-sm">Understanding how banks and institutions facilitate
+                            orders across the FX landscape.</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="text-right hidden sm:block">
+                            <div class="text-xs font-bold text-tertiary uppercase tracking-widest">Duration</div>
+                            <div class="text-sm font-semibold">6.5 Hours</div>
+                        </div>
+                        <span class="material-symbols-outlined text-outline-variant group-hover:text-primary"
+                            data-icon="expand_more">expand_more</span>
+                    </div>
+                </div>
+                <!-- Module 02 -->
+                <div
+                    class="group bg-surface hover:bg-surface-container-low transition-all duration-300 rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center border-t border-surface-container-high md:border-t-0">
+                    <div
+                        class="text-6xl font-black text-surface-container-highest group-hover:text-primary-fixed-dim transition-colors tracking-tighter">
+                        02</div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-bold mb-1">Liquidity &amp; Inducement</h4>
+                        <p class="text-on-surface-variant text-sm">Identifying "retail traps" and where the smart money
+                            is actually looking to enter.</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="text-right hidden sm:block">
+                            <div class="text-xs font-bold text-tertiary uppercase tracking-widest">Duration</div>
+                            <div class="text-sm font-semibold">12 Hours</div>
+                        </div>
+                        <span class="material-symbols-outlined text-outline-variant group-hover:text-primary"
+                            data-icon="expand_more">expand_more</span>
+                    </div>
+                </div>
+                <!-- Module 03 -->
+                <div
+                    class="group bg-surface hover:bg-surface-container-low transition-all duration-300 rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center border-t border-surface-container-high md:border-t-0">
+                    <div
+                        class="text-6xl font-black text-surface-container-highest group-hover:text-primary-fixed-dim transition-colors tracking-tighter">
+                        03</div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-bold mb-1">Risk Management Frameworks</h4>
+                        <p class="text-on-surface-variant text-sm">Advanced position sizing and portfolio correlation
+                            management strategies.</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="text-right hidden sm:block">
+                            <div class="text-xs font-bold text-tertiary uppercase tracking-widest">Duration</div>
+                            <div class="text-sm font-semibold">8 Hours</div>
+                        </div>
+                        <span class="material-symbols-outlined text-outline-variant group-hover:text-primary"
+                            data-icon="expand_more">expand_more</span>
+                    </div>
+                </div>
+                <!-- Module 04 -->
+                <div
+                    class="group bg-surface hover:bg-surface-container-low transition-all duration-300 rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center border-t border-surface-container-high md:border-t-0">
+                    <div
+                        class="text-6xl font-black text-surface-container-highest group-hover:text-primary-fixed-dim transition-colors tracking-tighter">
+                        04</div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-bold mb-1">The Execution Blueprint</h4>
+                        <p class="text-on-surface-variant text-sm">Finalizing your personal trading plan with mechanical
+                            checklists and entry rules.</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="text-right hidden sm:block">
+                            <div class="text-xs font-bold text-tertiary uppercase tracking-widest">Duration</div>
+                            <div class="text-sm font-semibold">14 Hours</div>
+                        </div>
+                        <span class="material-symbols-outlined text-outline-variant group-hover:text-primary"
+                            data-icon="expand_more">expand_more</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA Sticky Bar -->
+        <section class="mb-12">
+            <div
+                class="bg-surface-container-lowest rounded-2xl p-8 md:p-12 shadow-2xl shadow-primary/10 flex flex-col md:flex-row justify-between items-center gap-8 border border-primary/5">
+                <div>
+                    <h3 class="text-3xl font-black tracking-tight mb-2">Ready to master the ledger?</h3>
+                    <p class="text-on-surface-variant">Join 4,200+ traders scaling their institutional edge today.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+                    <div class="text-center md:text-right">
+                        <div class="text-2xl font-bold text-primary">$999.00</div>
+                        <div class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Lifetime Access
+                        </div>
+                    </div>
+                    <button
+                        class="w-full sm:w-auto bg-gradient-to-br from-primary to-primary-container text-on-primary px-12 py-5 rounded-lg text-xl font-bold shadow-xl hover:shadow-primary/40 transition-all active:scale-95">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-900 full-width bottom-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div>
+                <div class="text-xl font-black text-violet-800 dark:text-violet-200 mb-6 uppercase tracking-widest">Apex
+                    Ledger</div>
+                <p class="text-slate-500 max-w-sm text-sm font-medium leading-relaxed">The premier destination for
+                    serious forex traders. Institutional wisdom, retail accessibility.</p>
+                <div class="mt-8 flex gap-6">
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="public">public</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="share">share</span></a>
+                    <a class="text-slate-400 hover:text-cyan-600 transition-all" href="#"><span
+                            class="material-symbols-outlined" data-icon="terminal">terminal</span></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Platform</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Academy</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Signals</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Community</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Mentorship</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5
+                        class="font-manrope text-xs font-medium uppercase tracking-widest text-violet-600 dark:text-violet-400 mb-6">
+                        Support</h5>
+                    <ul class="space-y-4 font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Help Center</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Risk Disclosure</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-cyan-600 transition-all" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="border-t border-slate-200 dark:border-slate-800 py-8 px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500">© 2024 Apex Ledger.
+                All rights reserved.</div>
+            <div class="flex gap-8">
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Platform</a>
+                <a class="font-manrope text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-violet-700 transition-all"
+                    href="#">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis for Smooth Scroll & Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+
+    <script>
+        // Initialize Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Scroll Reveal Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
